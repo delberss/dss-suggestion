@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "dss-suggestions",
-    "slug": "dss-suggestions",
+    "name": "gourmetexplorer",
+    "slug": "gourmetexplorer",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo2.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.delberss.gourmetexplorer"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +32,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "af42b8d4-4671-4223-8279-2384111786d1"
+      }
     }
   }
 }
