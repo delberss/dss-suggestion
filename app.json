@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "gourmetexplorer",
-    "slug": "gourmetexplorer",
-    "version": "1.0.0",
+    "name": "Gourmet Explorer",
+    "slug": "dss-suggestions",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/logo2.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/logo2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,8 +16,9 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 3,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo2.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.delberss.gourmetexplorer"
@@ -25,7 +26,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/logo2.png"
     },
     "plugins": [
       "expo-router"
@@ -38,7 +39,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "af42b8d4-4671-4223-8279-2384111786d1"
+        "projectId": "93ea9b83-64aa-4f41-82b0-f8c6eb79b84e"
       }
     }
   }
