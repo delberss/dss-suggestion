@@ -48,11 +48,6 @@ export default function TypePlace() {
     loadFavorites();
   }, [navigation, place]);
 
-
-  useEffect(() =>{
-    console.log(favorites)
-  },[favorites])
-
   const saveFavorites = async (favorites: { id: number;}[]) => {
     try {
       await AsyncStorage.setItem(`favorites${place}${city}`, JSON.stringify(favorites));
@@ -92,9 +87,9 @@ export default function TypePlace() {
   }, [place, city]);
 
   const favoriteStores = stores
-  .filter(store => favorites.some(favorite => favorite.id === store.id)) // Verifica a categoria também
+  .filter(store => favorites.some(favorite => favorite.id === store.id))
   .map((store, index) => (
-    <View key={store.id} style={styles.gridItem}>
+    <TouchableOpacity key={store.id} style={styles.gridItem} onPress={() => handlePress(store)}>
       <View style={styles.rank}>
         <View>
           <Text style={styles.rankText}>{index + 1}</Text>
@@ -112,8 +107,10 @@ export default function TypePlace() {
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   ));
+
+
 
 
   return (
