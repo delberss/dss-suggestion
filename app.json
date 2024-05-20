@@ -4,11 +4,11 @@
     "slug": "dss-suggestions",
     "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/images/logo2.png",
+    "icon": "./assets/bundle/android/drawable/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/logo2.png",
+      "image": "./assets/bundle/android/drawable-land/screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,15 +18,14 @@
     "android": {
       "versionCode": 3,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo2.png",
+        "foregroundImage": "./assets/bundle/android/drawable/icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.delberss.gourmetexplorer"
+      }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/logo2.png"
+      "favicon": "./assets/bundle/android/drawable/icon.png"
     },
     "plugins": [
       "expo-router"
