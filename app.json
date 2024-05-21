@@ -2,13 +2,13 @@
   "expo": {
     "name": "Gourmet Explorer",
     "slug": "dss-suggestions",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "orientation": "portrait",
-    "icon": "./assets/bundle/android/drawable/icon.png",
+    "icon": "./assets/images/icon.jpeg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/bundle/android/drawable-land/screen.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,16 +16,17 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 3,
+      "versionCode": 5,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/bundle/android/drawable/icon.png",
+        "foregroundImage": "./assets/images/icon.jpeg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.delberss.dsssuggestions"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/bundle/android/drawable/icon.png"
+      "favicon": "./assets/images/icon.jpeg",
     },
     "plugins": [
       "expo-router"
