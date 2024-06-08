@@ -1,4 +1,4 @@
-import { Stack, useLocalSearchParams } from "expo-router";
+import { Stack } from "expo-router";
 
 export default function Layout(){
     return(
@@ -9,14 +9,14 @@ export default function Layout(){
                     backgroundColor: "#121212",
                 },
                 headerTintColor: "#FFF",
-                headerTitleAlign: "center", // Adicione esta linha
+                headerTitleAlign: "center", 
             }
         }
         >
             <Stack.Screen name="index" options={{title: "HOME"}}  />
             <Stack.Screen name="typePlace" options={{}} />
             <Stack.Screen name="aboutStore" options={{title: "LOJA"}} />
-
+            <Stack.Screen name="suggestions" options={{title: "SUGESTÃO"}} />
         </Stack>
     )
 }

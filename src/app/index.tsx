@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'expo-router';
+import { Link, router} from 'expo-router';
 import { StyleSheet, View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 
 import cities from '../../assets/cities/index';
 import categorias from '../../assets/categorias/index';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface Categoria {
   name: string;
   image: any;
 }
+
+
+const handleSuggestionPress = () => {
+  router.push({ pathname: "/suggestions" });
+};
 
 export default function App() {
   const [selectedCity, setSelectedCity] = useState<string>('São Paulo');
@@ -17,7 +23,7 @@ export default function App() {
     setSelectedCity(city);
   };
 
-  
+
 
   const renderGridItem = (categoria: Categoria) => (
     <Link href={{ pathname: "/typePlace", params: { place: categoria.name, city: selectedCity } }} asChild>
@@ -27,6 +33,7 @@ export default function App() {
       </TouchableOpacity>
     </Link>
   );
+
 
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
@@ -54,6 +61,11 @@ export default function App() {
             </React.Fragment>
           ))}
         </View>
+
+        <TouchableOpacity style={styles.suggestionButton} onPress={handleSuggestionPress}>
+          <MaterialIcons name="feedback" size={24} color="grey" style={styles.suggestionIcon} />
+          <Text style={styles.suggestionButtonText}>Deixe sua sugestão</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -118,5 +130,20 @@ const styles = StyleSheet.create({
   gridItemText: {
     marginTop: 5,
     textAlign: 'center',
+  },
+  suggestionButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 20,
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+  suggestionIcon: {
+    marginRight: 10,
+  },
+  suggestionButtonText: {
+    fontSize: 16,
   },
 });
