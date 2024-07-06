@@ -101,7 +101,7 @@ export default function TypePlace() {
         <TouchableOpacity onPress={() => handleFavoritePress(store.id)}>
           <Icon
             name='star'
-            size={30}
+            size={42}
             color="#FFD700"
             style={styles.favoriteIcon}
           />
@@ -126,7 +126,7 @@ export default function TypePlace() {
             <Text style={styles.favoritesTitle}>Favoritos</Text>
             <Icon
               name={showFavorites ? 'chevron-up' : 'chevron-down'}
-              size={20}
+              size={30}
               color="#FFD700"
             />
           </TouchableOpacity>
@@ -153,7 +153,7 @@ export default function TypePlace() {
                 <TouchableOpacity onPress={() => handleFavoritePress(store.id)}>
                   <Icon
                     name={favorites.some(favorite => favorite.id === store.id) ? 'star' : 'star-o'}
-                    size={30}
+                    size={42}
                     color="#FFD700"
                     style={styles.favoriteIcon}
                   />

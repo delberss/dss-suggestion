@@ -70,7 +70,7 @@ export default function AboutStore() {
             <View style={styles.infoRow}>
                 <Text style={styles.storeInfos}>{storeObject.endereco}</Text>
                 <TouchableOpacity onPress={() => copyToClipboard(storeObject.endereco)}>
-                    <IconMaterial name="content-copy" size={20} color="#666" />
+                    <IconMaterial name="content-copy" size={24} color="#666" />
                 </TouchableOpacity>
             </View>
             <View style={styles.infoRow}>
@@ -78,7 +78,7 @@ export default function AboutStore() {
                     <>
                         <Text style={styles.storeInfos}>{storeObject.telefone}</Text>
                         <TouchableOpacity onPress={() => copyToClipboard(storeObject.telefone)}>
-                            <IconMaterial name="content-copy" size={20} color="#666" />
+                            <IconMaterial name="content-copy" size={24} color="#666" />
                         </TouchableOpacity>
                     </>
                 ) : (
@@ -91,8 +91,7 @@ export default function AboutStore() {
 
             {storeObject.instagram && (
                 <TouchableOpacity style={styles.instagramContainer} onPress={() => Linking.openURL(storeObject.instagram)}>
-                    <Icon name="instagram" size={30} color="#C13584" />
-                    <Text style={styles.instagramText}>Visite o Instagram</Text>
+                    <Icon name="instagram" size={42} color="#C13584" style={styles.instagramText} />
                 </TouchableOpacity>
             )}
 
@@ -198,6 +197,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     storeInfos: {
+        padding: 4,
         fontSize: 16,
         color: '#666',
         marginRight: 5,
@@ -263,8 +263,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     instagramText: {
-        fontSize: 16,
-        color: '#C13584',
-        marginLeft: 10,
+        margin: 10,
     },
 });
